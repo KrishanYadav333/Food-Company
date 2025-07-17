@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - SU curries</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SU curries</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selling.html">Selling</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
+                <li><a href="catering.html">Catering</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="cart-item">
+                    <a href="cart.html">
+                        Cart (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cart-page">
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items">
+                <p>Your cart is currently empty.</p>
+            </div>
+
+            <div id="cart-summary">
+                <p><strong>Subtotal: ₹<span id="cart-subtotal">0.00</span></strong></p>
+                <button>Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SU curries. All rights reserved.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
