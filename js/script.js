@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const productItem = this.parentNode;
             const productName = productItem.querySelector('h3').textContent;
-            const productPriceText = productItem.querySelector('p:nth-child(3)').textContent; // Assuming price is the 3rd paragraph
+            const productPriceElement = productItem.querySelector('.price');
+            const productPriceText = productPriceElement ? productPriceElement.textContent : '';
             const productPrice = parseFloat(productPriceText.replace('Price: ₹', ''));
 
             const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
