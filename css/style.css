@@ -2,12 +2,12 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9; /* Light greyish background */
     color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #d9534f; /* Red color similar to the theme */
     color: white;
     padding: 1em;
     text-align: center;
@@ -23,7 +23,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #555;
+    background-color: #5cb85c; /* Green color for navigation (can be changed later) */
 }
 
 nav ul li {
