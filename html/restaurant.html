@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant - SU curries</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SU curries</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selling.html">Selling</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
+                <li><a href="catering.html">Catering</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="restaurant-page">
+            <h2>Welcome to Our Restaurant</h2>
+            <p>Experience the authentic flavors of SU curries in our warm and inviting atmosphere.</p>
+
+            <section id="restaurant-menu">
+                <h3>Our Menu</h3>
+                <div class="menu-category">
+                    <h4>Starters</h4>
+                    <ul>
+                        <li>Dish 1 - Description of Dish 1 - Price</li>
+                        <li>Dish 2 - Description of Dish 2 - Price</li>
+                        </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h4>Main Courses</h4>
+                    <ul>
+                        <li>Dish A - Description of Dish A - Price</li>
+                        <li>Dish B - Description of Dish B - Price</li>
+                        </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h4>Desserts</h4>
+                    <ul>
+                        <li>Dessert X - Description of Dessert X - Price</li>
+                        <li>Dessert Y - Description of Dessert Y - Price</li>
+                        </ul>
+                </div>
+                </section>
+
+            <section id="restaurant-info">
+                <h3>Visit Us</h3>
+                <p><strong>Address:</strong> Your Restaurant Address Here</p>
+                <p><strong>Operating Hours:</strong> Monday - Sunday, [Start Time] - [End Time]</p>
+            </section>
+
+            <section id="booking-section">
+                <h3>Book a Table</h3>
+                <form id="booking-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone"><br><br>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required><br><br>
+
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required><br><br>
+
+                    <label for="guests">Number of Guests:</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1 person</option>
+                        <option value="2">2 people</option>
+                        <option value="3">3 people</option>
+                        <option value="4">4 people</option>
+                        <option value="5">5+ people</option>
+                    </select><br><br>
+
+                    <label for="special-requests">Special Requests (optional):</label><br>
+                    <textarea id="special-requests" name="special-requests" rows="4" cols="50"></textarea><br><br>
+
+                    <button type="submit">Book Now</button>
+                </form>
+                <p class="booking-confirmation" style="display:none;">Your booking request has been submitted. We will contact you shortly to confirm.</p>
+                <p class="booking-error" style="display:none;">There was an error processing your booking request. Please try again later or contact us directly.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SU curries. All rights reserved.</p>
+    </footer>
+</body>
+</html>

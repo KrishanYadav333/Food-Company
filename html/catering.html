@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering - SU curries</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SU curries</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selling.html">Selling</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
+                <li><a href="catering.html">Catering</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="catering-page">
+            <h2>Our Catering Services</h2>
+            <p>SU curries offers professional and delicious catering services for all your special occasions.</p>
+
+            <section id="catering-details">
+                <h3>What We Offer</h3>
+                <p>We cater to a wide range of events, including:</p>
+                <ul>
+                    <li>Weddings</li>
+                    <li>Corporate Events</li>
+                    <li>Birthday Parties</li>
+                    <li>Family Gatherings</li>
+                    <li>And more!</li>
+                </ul>
+                <p>Our catering services include customized menu options tailored to your preferences and dietary needs. We use the freshest ingredients and authentic recipes to ensure a memorable culinary experience for your guests.</p>
+                </section>
+
+            <section id="request-quote">
+                <h3>Request a Catering Quote</h3>
+                <form id="catering-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone"><br><br>
+
+                    <label for="event-type">Type of Event:</label>
+                    <input type="text" id="event-type" name="event-type"><br><br>
+
+                    <label for="event-date">Date of Event:</label>
+                    <input type="date" id="event-date" name="event-date" required><br><br>
+
+                    <label for="event-time">Time of Event:</label>
+                    <input type="time" id="event-time" name="event-time"><br><br>
+
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" required><br><br>
+
+                    <label for="location">Event Location:</label>
+                    <textarea id="location" name="location" rows="3" cols="50"></textarea><br><br>
+
+                    <label for="dietary-needs">Dietary Needs/Preferences (optional):</label><br>
+                    <textarea id="dietary-needs" name="dietary-needs" rows="4" cols="50"></textarea><br><br>
+
+                    <label for="additional-info">Additional Information (optional):</label><br>
+                    <textarea id="additional-info" name="additional-info" rows="4" cols="50"></textarea><br><br>
+
+                    <button type="submit">Request Quote</button>
+                </form>
+                <p class="quote-confirmation" style="display:none;">Your catering quote request has been submitted. We will contact you shortly with a detailed quote.</p>
+                <p class="quote-error" style="display:none;">There was an error processing your quote request. Please try again later or contact us directly.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SU curries. All rights reserved.</p>
+    </footer>
+</body>
+</html>

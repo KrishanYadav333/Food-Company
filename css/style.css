@@ -1,0 +1,244 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #777;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Specific styles for homepage */
+#hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+#homepage-selling, #homepage-restaurant, #homepage-catering {
+    background-color: #e9e9e9;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#homepage-selling a, #homepage-restaurant a, #homepage-catering a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#homepage-selling a:hover, #homepage-restaurant a:hover, #homepage-catering a:hover {
+    background-color: #555;
+}
+
+/* Specific styles for selling page */
+#selling-page .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#selling-page .product-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#selling-page .product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#selling-page .product-item button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#selling-page .product-item button:hover {
+    background-color: #4cae4c;
+}
+
+/* Specific styles for restaurant page */
+#restaurant-menu .menu-category {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+#restaurant-menu .menu-category h4 {
+    margin-top: 0;
+    color: #555;
+}
+
+#restaurant-menu .menu-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+#restaurant-menu .menu-category ul li {
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 8px;
+}
+
+#restaurant-menu .menu-category ul li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#restaurant-info p strong {
+    font-weight: bold;
+}
+
+#booking-section form label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+#booking-section form input[type="text"],
+#booking-section form input[type="email"],
+#booking-section form input[type="tel"],
+#booking-section form input[type="date"],
+#booking-section form input[type="time"],
+#booking-section form select,
+#booking-section form textarea {
+    width: calc(100% - 160px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#booking-section form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#booking-section form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Specific styles for catering page */
+#catering-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#request-quote form label {
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+#request-quote form input[type="text"],
+#request-quote form input[type="email"],
+#request-quote form input[type="tel"],
+#request-quote form input[type="date"],
+#request-quote form input[type="time"],
+#request-quote form input[type="number"],
+#request-quote form textarea {
+    width: calc(100% - 190px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#request-quote form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#request-quote form button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
