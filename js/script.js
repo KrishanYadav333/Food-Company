@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call to update cart count when the page loads
     updateCartCount();
     
-    // Function to display cart items on the cart page
+        // Function to display cart items on the cart page
         function displayCartItems() {
             const cartItemsContainer = document.getElementById('cart-items');
             const cartSubtotalSpan = document.getElementById('cart-subtotal');
@@ -44,28 +44,32 @@ document.addEventListener('DOMContentLoaded', function() {
                     const ul = document.createElement('ul');
 
                     cartItems.forEach((item, index) => {
-                        const li = document.createElement('li');
-                        const quantityLabel = document.createElement('label');
-                        quantityLabel.textContent = 'Quantity: ';
-                        const quantityInput = document.createElement('input');
-                        quantityInput.type = 'number';
-                        quantityInput.value = 1; // Default quantity
-                        quantityInput.min = 1;
-                        quantityInput.classList.add('cart-quantity-input');
-                        quantityInput.dataset.index = index; // Store index to identify item
+                        if (item && typeof item.price === 'number') { // Add this check
+                            const li = document.createElement('li');
+                            const quantityLabel = document.createElement('label');
+                            quantityLabel.textContent = 'Quantity: ';
+                            const quantityInput = document.createElement('input');
+                            quantityInput.type = 'number';
+                            quantityInput.value = item.quantity || 1; // Use stored quantity or default to 1
+                            quantityInput.min = 1;
+                            quantityInput.classList.add('cart-quantity-input');
+                            quantityInput.dataset.index = index; // Store index to identify item
 
-                        const removeButton = document.createElement('button');
-                        removeButton.textContent = 'Remove';
-                        removeButton.classList.add('cart-remove-button');
-                        removeButton.dataset.index = index; // Store index to identify item
+                            const removeButton = document.createElement('button');
+                            removeButton.textContent = 'Remove';
+                            removeButton.classList.add('cart-remove-button');
+                            removeButton.dataset.index = index; // Store index to identify item
 
-                        li.appendChild(document.createTextNode(`${item.name} - ₹${item.price.toFixed(2)}`));
-                        li.appendChild(document.createElement('br'));
-                        li.appendChild(quantityLabel);
-                        li.appendChild(quantityInput);
-                        li.appendChild(removeButton);
-                        ul.appendChild(li);
-                        subtotal += item.price * parseInt(quantityInput.value); // Consider initial quantity
+                            li.appendChild(document.createTextNode(`${item.name} - ₹${item.price.toFixed(2)}`));
+                            li.appendChild(document.createElement('br'));
+                            li.appendChild(quantityLabel);
+                            li.appendChild(quantityInput);
+                            li.appendChild(removeButton);
+                            ul.appendChild(li);
+                            subtotal += item.price * parseInt(quantityInput.value); // Consider initial quantity
+                        } else {
+                            console.error('Invalid cart item found:', item); // Log invalid item for debugging
+                        }
                     });
                     cartItemsContainer.appendChild(ul);
                     cartSubtotalSpan.textContent = subtotal.toFixed(2);
