@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SU curries</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SU curries</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selling.html">Selling</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
+                <li><a href="catering.html">Catering</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-us-page">
+            <h2>Contact SU curries</h2>
+            <p>We'd love to hear from you! Please use the contact information below or send us a message using the form.</p>
+
+            <section id="contact-info">
+                <h3>Our Contact Information</h3>
+                <p><strong>Address:</strong> Your Company Address Here</p>
+                <p><strong>Phone:</strong> Your Phone Number</p>
+                <p><strong>Email:</strong> Your Email Address</p>
+                </section>
+
+            <section id="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject"><br><br>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="50" required></textarea><br><br>
+
+                    <button type="submit">Send Message</button>
+                </form>
+                <p class="contact-confirmation" style="display:none;">Your message has been sent successfully. We will get back to you as soon as possible.</p>
+                <p class="contact-error" style="display:none;">There was an error sending your message. Please try again later or contact us directly.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SU curries. All rights reserved.</p>
+    </footer>
+</body>
+</html>
