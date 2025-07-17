@@ -28,4 +28,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial call to update cart count when the page loads
     updateCartCount();
+    
+    // Function to display cart items on the cart page
+        function displayCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartSubtotalSpan = document.getElementById('cart-subtotal');
+
+            if (cartItemsContainer && cartSubtotalSpan) {
+                const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+                let subtotal = 0;
+
+                if (cartItems.length > 0) {
+                    cartItemsContainer.innerHTML = ''; // Clear any existing content
+                    const ul = document.createElement('ul');
+
+                    cartItems.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = `${item.name} - ₹${item.price.toFixed(2)}`;
+                        ul.appendChild(li);
+                        subtotal += item.price;
+                    });
+                    cartItemsContainer.appendChild(ul);
+                    cartSubtotalSpan.textContent = subtotal.toFixed(2);
+                } else {
+                    cartItemsContainer.innerHTML = '<p>Your cart is currently empty.</p>';
+                    cartSubtotalSpan.textContent = '0.00';
+                }
+            }
+        }
+
+        // Call displayCartItems if we are on the cart page
+        if (document.getElementById('cart-page')) {
+            displayCartItems();
+        }
 });
