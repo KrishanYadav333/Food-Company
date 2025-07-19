@@ -1,20 +1,15 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9; /* Light greyish background */
-    color: #333;
-}
-
 header {
-    background-color: #d9534f; /* Red color similar to the theme */
+    background-color: #e53935; /* Reddish-orange header background */
     color: white;
-    padding: 1em;
-    text-align: center;
+    padding: 1em 20px; /* Add some padding to the sides */
+    display: flex;
+    justify-content: space-between; /* Puts space between logo and nav */
+    align-items: center; /* Vertically align items in the header */
 }
 
 header h1 {
     margin: 0;
+    font-size: 2em; /* Adjust font size if needed */
 }
 
 nav ul {
@@ -22,12 +17,14 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    background-color: #de884e; /* Green color for navigation (can be changed later) */
 }
 
 nav ul li {
-    margin: 0;
+    margin-left: 15px; /* Add some spacing between navigation items */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Remove margin from the first navigation item */
 }
 
 nav ul li a {
